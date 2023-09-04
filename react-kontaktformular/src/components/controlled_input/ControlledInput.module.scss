@@ -1,0 +1,10 @@
+.controlledInputContainer {
+    display: flex;
+    gap: 40px;
+
+    .controlledInput {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
