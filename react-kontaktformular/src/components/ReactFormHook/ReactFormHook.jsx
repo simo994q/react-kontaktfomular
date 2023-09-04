@@ -48,7 +48,7 @@ export const ReactFormHook = () => {
                     <input {...register('lastName')} name="lastName" id="lastName" />
                 </label>
                 <label htmlFor="phone">
-                    Phone
+                    Phone number
                     <input {...register('phone')} name="phone" id="phone" />
                 </label>
                 <label htmlFor="email">
