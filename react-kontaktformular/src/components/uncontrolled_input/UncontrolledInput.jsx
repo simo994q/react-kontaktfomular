@@ -28,23 +28,6 @@ export const UncontrolledInput = () => {
         })
     }
 
-    function resetForm(e) {
-        e.target.firstName.value = ''
-        e.target.lastName.value = ''
-        e.target.phoneNumber.value = ''
-        e.target.email.value = ''
-        e.target.comment.value = ''
-
-        setFormData({
-            firstName: '',
-            lastName: '',
-            phoneNumber: '',
-            email: '',
-            comment: '',
-            contactMethod: ''
-        })
-    }
-
     return (
         <>
             <div className={style.uncontrolledInputContainer}>
@@ -79,7 +62,7 @@ export const UncontrolledInput = () => {
                         <input type="radio" name="contactMethod" id="emailMethod" onClick={() => setContactMethod('Email')}/>
                     </label>
                     <input type="submit" value="Send" onSubmit={(e) => formSubmit(e)}/>
-                    <input type="button" value="Reset" onClick={(e) => resetForm(e)} />
+                    <input type="reset" value="Reset" />
                 </form>
                 <div style={{ display: showInput ? 'block' : 'none' }} className={style.uncontrolledInput}>
                     <h2>Sent data:</h2>
