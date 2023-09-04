@@ -1,0 +1,10 @@
+.reactFormInputContainer {
+    display: flex;
+    gap: 40px;
+
+    .reactFormInput {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

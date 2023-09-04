@@ -62,7 +62,7 @@ export const UncontrolledInput = () => {
                         <input type="radio" name="contactMethod" id="emailMethod" onClick={() => setContactMethod('Email')}/>
                     </label>
                     <input type="submit" value="Send" onSubmit={(e) => formSubmit(e)}/>
-                    <input type="reset" value="Reset" />
+                    <input type="reset" value="Reset" onClick={() => setShowInput(false)}/>
                 </form>
                 <div style={{ display: showInput ? 'block' : 'none' }} className={style.uncontrolledInput}>
                     <h2>Sent data:</h2>

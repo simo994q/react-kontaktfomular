@@ -68,7 +68,7 @@ export const ControlledInput = () => {
                     <input type="radio" name="contactMethod" id="email" onClick={() => setContactMethod('email')} />
                 </label>
                 <input type="submit" value="Send" />
-                <input type="reset" value="Reset" onClick={() => resetForm()} />
+                <input type="reset" value="Reset" onClick={() => {resetForm(), setShowInput(false)}} />
             </form>
             <div style={{display: showInput ? 'block' : 'none'}} className={style.controlledInput}>
                 <h2>Sent data:</h2>
