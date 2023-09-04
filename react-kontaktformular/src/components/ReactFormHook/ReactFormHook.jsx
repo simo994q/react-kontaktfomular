@@ -3,7 +3,7 @@ import style from './ReactFormHook.module.scss'
 import { useState } from "react";
 
 export const ReactFormHook = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     const setData = (data) => {
         setFirstName(data.firstName)
@@ -12,15 +12,11 @@ export const ReactFormHook = () => {
         setEmail(data.email)
         setComment(data.comment)
         setContactMethod(data.contactMethod)
+        setShowInput(true)
     }
 
-    const resetData = (data) => {
-        setFirstName('')
-        setLastName('')
-        setPhoneNumber('')
-        setEmail('')
-        setComment('')
-        setContactMethod('')
+    const resetData = () => {
+        reset()
     }
 
     const onSubmit = data => setData(data);
@@ -68,7 +64,7 @@ export const ReactFormHook = () => {
                     Email
                     <input {...register("contactMethod", { required: true })} type="radio" id="email" value='Email' />
                 </label>
-                <input type="submit" value="Send" onClick={() => setShowInput(true)} />
+                <input type="submit" value="Send" />
                 <input type="reset" value="Reset" onClick={() => {resetData(), setShowInput(false)}} />
             </form>
             <div style={{ display: showInput ? 'block' : 'none' }} className={style.reactFormInput}>

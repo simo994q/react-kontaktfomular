@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <h1>Kontaktformular</h1>
-      <ControlledInput />
+      {/* <ControlledInput /> */}
       {/* <UncontrolledInput /> */}
-      {/* <ReactFormHook /> */}
+      <ReactFormHook />
     </>
   )
 }
